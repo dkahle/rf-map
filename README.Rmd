@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Downloading the RF-MAP files
 
-There are three ways to download the RF-MAP files:
+There are two ways to download the RF-MAP files:
 
 1.  From the Linux command line, type `git clone https://github.com/dkahle/rf-map.git`; the directory will appear in the directory given by typing `pwd` at the command line.
 2.  From within RStudio, go to File > New Project... > Version Control > Git, then type in `https://github.com/dkahle/rf-map.git` as the repository, and Create Project.
