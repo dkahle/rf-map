@@ -38,7 +38,10 @@ set.seed(42L)
 #### Apply the RFMAP model on new data ####
 # First load in your new data. The .csv file is named "input.csv"
 # You can load in any csv file, but make sure you update the file name in the next line:
-input <- read.csv(here("input.csv"), header = TRUE, na.strings = c("", " ", "NA"))
+input <- read.csv(
+  file = here("input.csv"), 
+  header = TRUE, na.strings = c("", " ", "NA")
+)
 
 # Predict MAP values
 output <- input

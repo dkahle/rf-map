@@ -46,7 +46,18 @@ Please note - although you are re-creating the RF-MAP model from the same traini
 4.  The R script will generate an output file named `output.csv` that will contain the predicted MAP values in a column named `RFMAP`.
 
 
+Here's an example with the BU-SI data (note that it does not do prediction, it just fits the random forest):
+```{r}
+library("here"); library("randomForest")
 
+busi <- read.csv(
+  file = here("busi.csv"), 
+  header = TRUE, na.strings = c("", " ", "NA")
+) 
+
+set.seed(42L)
+randomForest(MAP ~ ., data = busi, importance = TRUE)
+```
 
 
 

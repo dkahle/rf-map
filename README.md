@@ -48,6 +48,33 @@ Installation and operating Instructions
 4.  The R script will generate an output file named `output.csv` that
     will contain the predicted MAP values in a column named `RFMAP`.
 
+Here’s an example with the BU-SI data (note that it does not do
+prediction, it just fits the random forest):
+
+``` r
+library("here"); library("randomForest")
+#  here() starts at /Users/david_kahle/Dropbox/dev/rf-map/rf-map
+#  randomForest 4.6-14
+#  Type rfNews() to see new features/changes/bug fixes.
+
+busi <- read.csv(
+  file = here("busi.csv"), 
+  header = TRUE, na.strings = c("", " ", "NA")
+) 
+
+set.seed(42L)
+randomForest(MAP ~ ., data = busi, importance = TRUE)
+#  
+#  Call:
+#   randomForest(formula = MAP ~ ., data = busi, importance = TRUE) 
+#                 Type of random forest: regression
+#                       Number of trees: 500
+#  No. of variables tried at each split: 3
+#  
+#            Mean of squared residuals: 199233.7
+#                      % Var explained: 57.39
+```
+
 Design
 ------
 
