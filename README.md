@@ -41,7 +41,7 @@ Installation and operating instructions
     `.csv` file that contains your data, as long as the column headings
     for the input variables have the same formatting as those in
     `input.csv` file.
-2.  Open the R file `RFMAP.R`
+2.  Open the R file `rf-map.R`
 3.  Follow the commented script; [the **here**
     package](https://cran.r-project.org/web/packages/here/index.html)
     should take care of pathing.

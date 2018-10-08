@@ -41,7 +41,7 @@ Please note - although you are re-creating the RF-MAP model from the same traini
 ## Installation and operating instructions
 
 1.  Populate the `input.csv` file with uppermost B horizon data for which you would like to predict mean annual precipitation (MAP) values. Column headings must have the same names (case-sensitive); however, they can be in any order. Alternatively, you can use any `.csv` file that contains your data, as long as the column headings for the input variables have the same formatting as those in `input.csv` file.
-2.  Open the R file `RFMAP.R`
+2.  Open the R file `rf-map.R`
 3.  Follow the commented script; [the __here__ package](https://cran.r-project.org/web/packages/here/index.html) should take care of pathing.
 4.  The R script will generate an output file named `output.csv` that will contain the predicted MAP values in a column named `RFMAP`.
 
