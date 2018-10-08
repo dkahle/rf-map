@@ -19,14 +19,65 @@ knitr::opts_chunk$set(
 
 ## Installation and operating instructions
 
-There are two ways download the RF-MAP files:
+There are two ways to download the RF-MAP files:
 
 1.  From the Linux command line, type `git clone https://github.com/dkahle/rf-map.git`; the directory will appear in the directory given by typing `pwd` at the command line.
 2.  From within RStudio, go to File > New Project... > Version Control > Git, then type in `https://github.com/dkahle/rf-map.git` as the repository, and Create Project.
 
 The GitHub repository has three main files: 
 
-* `busi.csv`, which contains data sued for generating the RF-MAP model,
+* `busi.csv`, which contains data used for generating the RF-MAP model,
 * `input.csv`, which is a template file for entering new data, and
 * `rf-map.R`, the R file that generates the RF-MAP model.
+
+
+
+## Design
+
+The RF-MAP model was designed in RStudio, see the output of `devtools::session_info()` below. RF-MAP is a random forest model built using [__randomForest__](https://cran.r-project.org/web/packages/randomForest/index.html) (Therneu et al., 2018).
+```r
+Session info ---------------------------------------------
+ setting  value                       
+ version  R version 3.5.1 (2018-07-02)
+ system   x86_64, darwin15.6.0        
+ ui       RStudio (1.2.1015)          
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ tz       America/Chicago             
+ date     2018-10-08                  
+
+Packages -------------------------------------------------
+ package      * version date       source        
+ backports      1.1.2   2017-12-13 CRAN (R 3.5.0)
+ base         * 3.5.1   2018-07-05 local         
+ compiler       3.5.1   2018-07-05 local         
+ datasets     * 3.5.1   2018-07-05 local         
+ devtools       1.13.6  2018-06-27 CRAN (R 3.5.0)
+ digest         0.6.16  2018-08-22 cran (@0.6.16)
+ evaluate       0.11    2018-07-17 CRAN (R 3.5.0)
+ graphics     * 3.5.1   2018-07-05 local         
+ grDevices    * 3.5.1   2018-07-05 local         
+ here         * 0.1     2017-05-28 CRAN (R 3.5.0)
+ htmltools      0.3.6   2017-04-28 CRAN (R 3.5.0)
+ knitr          1.20    2018-02-20 CRAN (R 3.5.0)
+ magrittr       1.5     2014-11-22 CRAN (R 3.5.0)
+ memoise        1.1.0   2017-04-21 CRAN (R 3.5.0)
+ methods      * 3.5.1   2018-07-05 local         
+ packrat        0.4.9-3 2018-06-01 CRAN (R 3.5.0)
+ randomForest * 4.6-14  2018-03-25 CRAN (R 3.5.0)
+ Rcpp           0.12.18 2018-07-23 CRAN (R 3.5.0)
+ rmarkdown      1.10    2018-06-11 CRAN (R 3.5.0)
+ rprojroot      1.3-2   2018-01-03 CRAN (R 3.5.0)
+ stats        * 3.5.1   2018-07-05 local         
+ stringi        1.2.4   2018-07-20 CRAN (R 3.5.0)
+ stringr        1.3.1   2018-05-10 CRAN (R 3.5.0)
+ tools          3.5.1   2018-07-05 local         
+ utils        * 3.5.1   2018-07-05 local         
+ withr          2.1.2   2018-03-15 CRAN (R 3.5.0)
+ yaml           2.2.0   2018-07-25 CRAN (R 3.5.0)
+```
+
+
+
+
 
