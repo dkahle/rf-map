@@ -5,7 +5,7 @@ rf-map
 Downloading the RF-MAP files
 ----------------------------
 
-There are two ways to download the RF-MAP files:
+There are three ways to download the RF-MAP files:
 
 1.  From the Linux command line, type
     `git clone https://github.com/dkahle/rf-map.git`; the directory will
