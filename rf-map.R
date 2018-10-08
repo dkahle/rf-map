@@ -5,34 +5,48 @@
 
 # The following code will build the RF-MAP model using the BU-SI uppermost B horizon data set
 
+
+
 #### I. Setup ####
 # Set your working directory: change the file path to the folder that contains your data files (.csv format)
 # Note: if you are using a PC, make sure you change backslashes to forward slashes
-setwd("C:/.../RFMAP")
+if (!requireNamespace("here")) install.packages("here")
+library("here")
+
+
 
 # Read in your data file
-BUSI <- read.csv("BUSI.csv", header = TRUE, na.strings=c("", " ", "NA")) 
+busi <- read.csv(
+  file = here("busi.csv"), 
+  header = TRUE, na.strings = c("", " ", "NA")
+) 
+
+
 
 #### Build the RFMAP model ####
-# Install the randomForest package
-install.packages("randomForest")
-require(randomForest)
+
+# Install the randomForest package, if needed
+if (!requireNamespace("randomForest")) install.packages("randomForest")
+library("randomForest")
 
 # Generate the RFMAP model
-RFMAP <- randomForest(MAP ~ ., data = BUSI, importance=TRUE) 
+set.seed(42L)
+(rfmap <- randomForest(MAP ~ ., data = busi, importance = TRUE))
+
+
 
 #### Apply the RFMAP model on new data ####
-# First load in your new data. The .csv file is named "Input.csv"
+# First load in your new data. The .csv file is named "input.csv"
 # You can load in any csv file, but make sure you update the file name in the next line:
-Input <- read.csv("Input.csv", header = TRUE, na.strings=c("", " ", "NA"))
+input <- read.csv(here("input.csv"), header = TRUE, na.strings = c("", " ", "NA"))
 
 # Predict MAP values
-Output <- Input
-Output$RFMAP <- predict(RFMAP, newdata=Input) # prediction error = 440 mm
+output <- input
+output$rfmap <- predict(rfmap, newdata = input) # prediction error = 440 mm
 
 # Save results as an output file; the RFMAP column will contain your MAP values
-write.csv(Output, "Output.csv")
-# The Output.csv file is now located in your directory folder.
+write.csv(output, here("output.csv"))
+# The output.csv file is now located in your directory folder.
 # Please use a prediction error of 440 mm associated with all output values.
 
 # Please note: each version of the RF-MAP model that is re-created will be slightly different from all other versions.
