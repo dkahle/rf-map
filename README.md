@@ -31,7 +31,7 @@ inherently be unique every time it is generated if you don’t fix the
 random number generator seed with `set.seed()`. The paper was generated
 using `set.seed(42)`.
 
-Installation and operating Instructions
+Installation and operating instructions
 ---------------------------------------
 
 1.  Populate the `input.csv` file with uppermost B horizon data for

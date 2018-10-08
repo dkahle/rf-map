@@ -38,7 +38,7 @@ The GitHub repository has three main files:
 Please note - although you are re-creating the RF-MAP model from the same training data that is published in the manuscript, the model will inherently be unique every time it is generated if you don't fix the random number generator seed with `set.seed()`. The paper was generated using `set.seed(42)`.
 
 
-## Installation and operating Instructions
+## Installation and operating instructions
 
 1.  Populate the `input.csv` file with uppermost B horizon data for which you would like to predict mean annual precipitation (MAP) values. Column headings must have the same names (case-sensitive); however, they can be in any order. Alternatively, you can use any `.csv` file that contains your data, as long as the column headings for the input variables have the same formatting as those in `input.csv` file.
 2.  Open the R file `RFMAP.R`
