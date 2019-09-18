@@ -85,43 +85,81 @@ using
 (Therneu et al., 2018).
 
 ``` r
-Session info ---------------------------------------------
+Session info -----------------------------------------------------------------------------------------------------------------
  setting  value                       
- version  R version 3.5.1 (2018-07-02)
- system   x86_64, darwin15.6.0        
- ui       RStudio (1.2.1015)          
+ version  R version 3.4.3 (2017-11-30)
+ system   x86_64, mingw32             
+ ui       RStudio (1.1.383)           
  language (EN)                        
- collate  en_US.UTF-8                 
+ collate  English_United States.1252  
  tz       America/Chicago             
- date     2018-10-08                  
+ date     2018-10-10                  
 
-Packages -------------------------------------------------
+Packages ---------------------------------------------------------------------------------------------------------------------
  package      * version date       source        
- backports      1.1.2   2017-12-13 CRAN (R 3.5.0)
- base         * 3.5.1   2018-07-05 local         
- compiler       3.5.1   2018-07-05 local         
- datasets     * 3.5.1   2018-07-05 local         
- devtools       1.13.6  2018-06-27 CRAN (R 3.5.0)
- digest         0.6.16  2018-08-22 cran (@0.6.16)
- evaluate       0.11    2018-07-17 CRAN (R 3.5.0)
- graphics     * 3.5.1   2018-07-05 local         
- grDevices    * 3.5.1   2018-07-05 local         
- here         * 0.1     2017-05-28 CRAN (R 3.5.0)
- htmltools      0.3.6   2017-04-28 CRAN (R 3.5.0)
- knitr          1.20    2018-02-20 CRAN (R 3.5.0)
- magrittr       1.5     2014-11-22 CRAN (R 3.5.0)
- memoise        1.1.0   2017-04-21 CRAN (R 3.5.0)
- methods      * 3.5.1   2018-07-05 local         
- packrat        0.4.9-3 2018-06-01 CRAN (R 3.5.0)
- randomForest * 4.6-14  2018-03-25 CRAN (R 3.5.0)
- Rcpp           0.12.18 2018-07-23 CRAN (R 3.5.0)
- rmarkdown      1.10    2018-06-11 CRAN (R 3.5.0)
- rprojroot      1.3-2   2018-01-03 CRAN (R 3.5.0)
- stats        * 3.5.1   2018-07-05 local         
- stringi        1.2.4   2018-07-20 CRAN (R 3.5.0)
- stringr        1.3.1   2018-05-10 CRAN (R 3.5.0)
- tools          3.5.1   2018-07-05 local         
- utils        * 3.5.1   2018-07-05 local         
- withr          2.1.2   2018-03-15 CRAN (R 3.5.0)
- yaml           2.2.0   2018-07-25 CRAN (R 3.5.0)
+ assertthat     0.2.0   2017-04-11 CRAN (R 3.4.3)
+ base         * 3.4.3   2017-12-06 local         
+ bindr          0.1     2016-11-13 CRAN (R 3.4.3)
+ bindrcpp       0.2     2017-06-17 CRAN (R 3.4.3)
+ broom          0.4.4   2018-03-29 CRAN (R 3.4.4)
+ cellranger     1.1.0   2016-07-27 CRAN (R 3.4.3)
+ cli            1.0.0   2017-11-05 CRAN (R 3.4.3)
+ colorspace     1.3-2   2016-12-14 CRAN (R 3.4.3)
+ compiler       3.4.3   2017-12-06 local         
+ crayon         1.3.4   2017-09-16 CRAN (R 3.4.3)
+ datasets     * 3.4.3   2017-12-06 local         
+ devtools     * 1.13.6  2018-06-27 CRAN (R 3.4.4)
+ digest         0.6.13  2017-12-14 CRAN (R 3.4.3)
+ dplyr        * 0.7.4   2017-09-28 CRAN (R 3.4.3)
+ forcats      * 0.3.0   2018-02-19 CRAN (R 3.4.3)
+ foreign        0.8-69  2017-06-22 CRAN (R 3.4.3)
+ ggplot2      * 2.2.1   2016-12-30 CRAN (R 3.4.3)
+ glue           1.2.0   2017-10-29 CRAN (R 3.4.3)
+ graphics     * 3.4.3   2017-12-06 local         
+ grDevices    * 3.4.3   2017-12-06 local         
+ grid           3.4.3   2017-12-06 local         
+ gtable         0.2.0   2016-02-26 CRAN (R 3.4.3)
+ haven          1.1.1   2018-01-18 CRAN (R 3.4.3)
+ hms            0.4.2   2018-03-10 CRAN (R 3.4.3)
+ httr           1.3.1   2017-08-20 CRAN (R 3.4.3)
+ jsonlite       1.5     2017-06-01 CRAN (R 3.4.3)
+ lattice        0.20-35 2017-03-25 CRAN (R 3.4.3)
+ lazyeval       0.2.1   2017-10-29 CRAN (R 3.4.3)
+ lubridate      1.7.2   2018-02-06 CRAN (R 3.4.3)
+ magrittr     * 1.5     2014-11-22 CRAN (R 3.4.3)
+ memoise        1.1.0   2017-04-21 CRAN (R 3.4.4)
+ methods      * 3.4.3   2017-12-06 local         
+ mnormt         1.5-5   2016-10-15 CRAN (R 3.4.1)
+ modelr         0.1.1   2017-07-24 CRAN (R 3.4.3)
+ munsell        0.4.3   2016-02-13 CRAN (R 3.4.3)
+ nlme           3.1-131 2017-02-06 CRAN (R 3.4.3)
+ parallel       3.4.3   2017-12-06 local         
+ pillar         1.0.1   2017-11-27 CRAN (R 3.4.3)
+ pkgconfig      2.0.1   2017-03-21 CRAN (R 3.4.3)
+ plyr           1.8.4   2016-06-08 CRAN (R 3.4.3)
+ psych          1.7.8   2017-09-09 CRAN (R 3.4.3)
+ purrr        * 0.2.4   2017-10-18 CRAN (R 3.4.3)
+ R6             2.2.2   2017-06-17 CRAN (R 3.4.3)
+ randomForest * 4.6-12  2015-10-07 CRAN (R 3.4.3)
+ Rcpp           0.12.14 2017-11-23 CRAN (R 3.4.3)
+ readr        * 1.1.1   2017-05-16 CRAN (R 3.4.3)
+ readxl         1.0.0   2017-04-18 CRAN (R 3.4.3)
+ reshape2     * 1.4.3   2017-12-11 CRAN (R 3.4.3)
+ rlang          0.2.0   2018-02-20 CRAN (R 3.4.3)
+ rpart        * 4.1-12  2018-01-12 CRAN (R 3.4.3)
+ rpart.plot   * 2.1.2   2017-04-20 CRAN (R 3.4.3)
+ rstudioapi     0.7     2017-09-07 CRAN (R 3.4.3)
+ rvest          0.3.2   2016-06-17 CRAN (R 3.4.3)
+ scales         0.5.0   2017-08-24 CRAN (R 3.4.3)
+ stats        * 3.4.3   2017-12-06 local         
+ stringi        1.1.6   2017-11-17 CRAN (R 3.4.2)
+ stringr      * 1.2.0   2017-02-18 CRAN (R 3.4.3)
+ tibble       * 1.4.1   2017-12-25 CRAN (R 3.4.3)
+ tidyr        * 0.8.0   2018-01-29 CRAN (R 3.4.3)
+ tidyverse    * 1.2.1   2017-11-14 CRAN (R 3.4.3)
+ tools          3.4.3   2017-12-06 local         
+ utils        * 3.4.3   2017-12-06 local         
+ withr          2.1.2   2018-03-15 CRAN (R 3.4.3)
+ xml2           1.2.0   2018-01-24 CRAN (R 3.4.3)
+ yaml           2.1.16  2017-12-12 CRAN (R 3.4.3)
 ```
